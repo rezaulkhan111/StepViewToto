@@ -1,11 +1,10 @@
 package me.tatocaster.stepviewapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,9 +13,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val adapter = MyPagerAdapter(supportFragmentManager)
-        viewPager.adapter = adapter
+//        viewPager.adapter = adapter
 
-        stepView.setupWithViewPager(viewPager)
+//        stepView.setupWithViewPager(viewPager)
     }
 
     class MyPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
