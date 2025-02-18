@@ -742,5 +742,4 @@ class StepView : View {
         const val DEFAULT_STROKE_ALPHA = 100
         private const val DEFAULT_TITLE_SIZE = 12
     }
-
 }

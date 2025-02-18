@@ -5,8 +5,7 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        jcenter()
-
+//        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.3.1'
@@ -19,29 +18,27 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        jcenter()
+//        jcenter()
 //        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
         maven { url 'https://jitpack.io' }
 
     }
 }
 
-task clean(type: Delete) {
+tasks.register('clean', Delete) {
     delete rootProject.buildDir
 }
 
 
 ext {
-    minSdkVersion = 16
+    minSdkVersion = 21
     targetSdkVersion = 28
     compileSdkVersion = 28
-    versionCode = 1
-    versionName = '1.0'
+    versionCode = 2
+    versionName = '2.0'
 
     appCompatVersion = '1.6.0'
 }
 
-ext.libraries = [
-        appcompat: "androidx.appcompat:appcompat:1.2.0",
-        corektx  : "androidx.core:core-ktx:$appCompatVersion"
-]
+ext.libraries = [appcompat: "androidx.appcompat:appcompat:1.2.0",
+                 corektx  : "androidx.core:core-ktx:$appCompatVersion"]
